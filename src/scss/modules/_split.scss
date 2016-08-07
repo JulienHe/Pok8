@@ -1,0 +1,56 @@
+.cross{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotateZ(0);
+    z-index: -2;
+    @extend %explode;
+    margin-left:-10px;
+    margin-top:-10px;
+    transform-origin : 50% 50%;
+    opacity: 0;
+    animation-name: magic;
+    animation-duration: .8s;
+    &:before, &:after{
+        width: 20px;
+        height: 5px;
+        background-color: $red-color;
+        display: inline-block;
+        content: "";
+        position: absolute;
+        border-radius: 5px;
+        top: 7px;
+    }
+    &:after{
+        transform : rotate(90deg);
+    }
+    &--blue{
+        &:before, &:after{
+            background-color: $blue-color;
+        }
+    }
+    &--purple{
+        &:before, &:after{
+            background-color: $purple-color;
+        }
+    }
+    &--yellow{
+        &:before, &:after{
+            background-color: $yellow-color;
+        }
+    }
+    &--rotateSlow{
+        transform: rotateZ(15deg);
+    }
+}
+
+.triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 17.3px 10px;
+    border-color: transparent transparent $red-color transparent;
+}

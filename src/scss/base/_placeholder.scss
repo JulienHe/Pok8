@@ -1,0 +1,22 @@
+%centerItem{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes magic {
+    0%      {opacity: 0;}
+    50%      {opacity: 1;}
+    80%     {opacity: 1;}
+    100%    {opacity: 0;}
+}
+
+
+%animated{
+    transition : all .25s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+
+%explode{
+    transition : all .8s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}

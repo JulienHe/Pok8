@@ -1,0 +1,12 @@
+.answer{
+    position:absolute;
+    @extend %centerItem;
+    @extend %animated;
+    width: 90%;
+    transform: translate(-50%, -50%) scale(0);
+    display: inline-block;
+    vertical-align:top;
+    &--animated{
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

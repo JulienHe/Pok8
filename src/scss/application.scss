@@ -1,5 +1,11 @@
 @import "dev/dev";
 
-body{
-    background:red;
-}
+@import "base/reset";
+@import "base/mixins";
+@import "base/placeholder";
+@import "base/vars";
+@import "base/base";
+
+@import "modules/pokeball";
+@import "modules/split";
+@import "modules/answer";

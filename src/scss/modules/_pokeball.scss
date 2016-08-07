@@ -1,0 +1,112 @@
+.pokeball{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform :translate(-50%, -50%) rotate(0deg);
+    transform-origin : 50% 95%;
+    height: $pokeball--size;
+    width:$pokeball--size;
+    &__up, &__down{
+        @extend %animated;
+        transform: rotate(0);
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        &__foreground{
+            height:$pokeball--size / 2;
+            width:$pokeball--size;
+            border-radius: $pokeball--size $pokeball--size 0 0;
+            background:$pokeball--up;
+            border:6px solid $pokeball--black;
+            z-index: 10;
+            position: relative;
+        }
+        &__background{
+            position:absolute;
+            bottom: -30px;
+            left: 0;
+            height: 60px;
+            width: 100%;
+            border-radius: 50%;
+            background-color: #114F58;
+            border:6px solid $pokeball--black;
+            transform: rotateX(90deg);
+            @extend %animated;
+            overflow:hidden;
+            z-index: 10;
+            &:after{
+                width: $pokeball--size / 1.2;
+                left:-8px;
+                top: 31px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #295A6D;
+                content:"";
+                display: inline-block;
+                position: absolute;
+                transform: rotate(20deg);
+            }
+            &--animated{
+                transform: rotateX(-10deg);
+            }
+        }
+    }
+    &__up{
+        z-index: 10;
+        transform-origin: -10% 100%;
+        &--animated{
+            transform:rotateX(30deg) translate(0px, -100px);
+        }
+    }
+    &__down{
+        top:$pokeball--size / 2 - 6;
+        transform-origin: 10% 100%;
+        &__foreground{
+            transform : rotate(180deg);
+            background:$pokeball--down;
+        }
+        &--animated{
+            transform:rotateX(-30deg) translate(0px, 100px);
+        }
+        &__background{
+            top: -30px;
+            bottom: inherit;
+            &:after{
+                top: 18px;
+                left: -10px;
+                transform: rotate(10deg);
+            }
+        }
+    }
+    &__center{
+        position:absolute;
+        width: $pokeball--size / 5;
+        height: $pokeball--size / 5;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius:50%;
+        background-color:$pokeball--black;
+        z-index: 100;
+        @extend %animated;
+        &:before, &:after{
+            width: $pokeball--size / 7.5;
+            height: $pokeball--size / 7.5;
+            background-color: $pokeball--center;
+            display: inline;
+            content:"";
+            position: absolute;
+            border-radius:50%;
+            z-index: 20;
+            @extend %centerItem;
+        }
+        &:after{
+            width: $pokeball--size / 15;
+            height:$pokeball--size / 15;
+            box-shadow: 0px 1px 2px rgba($pokeball--black, .3);
+        }
+        &--animated{
+            transform: translate(-50%, -135%);
+        }
+    }
+}
