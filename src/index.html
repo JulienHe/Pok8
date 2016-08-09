@@ -37,14 +37,31 @@
     <meta name="twitter:image" content="https://avatars1.githubusercontent.com/u/718868?v=3&amp;s=400">
     <meta name="twitter:card" content="summary_large_image">
 
+    <link rel="apple-touch-icon" sizes="60x60" href="img/Icon-App-60x60@1x.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/Icon-App-76x76@1x.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/Icon-App-60x60@2x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/Icon-App-76x76@2x.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Icon-App-60x60@3x.png">
+
+    <!-- Allow web app to be run in full-screen mode. -->
+    <meta name="apple-mobile-web-app-capable" content="yes">  
+    <!-- Make the app title different than the page title. -->
+    <meta name="apple-mobile-web-app-title" content="Pok8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Configure the status bar. -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-transparent">
+
+
 </head>
 <body>
+    <h1>Welcome to Pok8</h1>
+    <h2>Ask yourself a question, and shake!</h2>
     <section class="main" role="main">
         <div class="pokeball">
             <div class="pokeball__up">
                 <div class="pokeball__up__foreground"></div>
-                <div class="pokeball__center"></div>
                 <div class="pokeball__up__background"></div>
+                <div class="pokeball__center"></div>
             </div>
             <div class="pokeball__down">
                 <div class="pokeball__down__foreground"></div>
@@ -52,6 +69,7 @@
             </div>
         </div>
     </section>
+    <a href="index.html" class="retry">Retry</a>
     <script src="js/main.js"></script>
 </body>
 </html>

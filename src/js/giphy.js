@@ -1,7 +1,10 @@
 'use strict';
+
 import $ from 'jquery';
+import {Pokeball} from './pokeball';
 import {Helpers} from './helpers';
 
+const pokeball = new Pokeball();
 const helpers = new Helpers();
 
 export class Giphy{
@@ -24,11 +27,19 @@ export class Giphy{
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
             var ratioElement = helpers.calculateAspectRatioFit(data.data.image_width, data.data.image_height, windowWidthMeasure, windowWidthMeasure);
-            var image = "<img class='answer' src='"+ data.data.image_original_url +"'>"
+            var image = "<img class='answer' src='"+ data.data.image_original_url +"'>";
+            var heighti = ratioElement.height / 2;
             $('body').append(image);
-            setTimeout(function () {
-                $('.answer').addClass('answer--animated');
-            },200);
+
+            $(".answer").one("load", function() {
+              // do stuff
+                pokeball.togglePokeball();
+                pokeball.openClosePokeball(heighti + 100, 30);
+                setTimeout(function () {
+                    $('.answer').addClass('answer--animated');
+                },200);
+            });
+
         })
         .fail(function(jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");

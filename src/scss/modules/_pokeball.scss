@@ -47,7 +47,7 @@
                 transform: rotate(20deg);
             }
             &--animated{
-                transform: rotateX(-10deg);
+                transform: rotateX(0deg);
             }
         }
     }
@@ -55,7 +55,7 @@
         z-index: 10;
         transform-origin: -10% 100%;
         &--animated{
-            transform:rotateX(30deg) translate(0px, -100px);
+            transform:rotateX(30deg) translateY(-200px);
         }
     }
     &__down{
@@ -66,7 +66,7 @@
             background:$pokeball--down;
         }
         &--animated{
-            transform:rotateX(-30deg) translate(0px, 100px);
+            transform:rotateX(-30deg) translateY(200px);
         }
         &__background{
             top: -30px;

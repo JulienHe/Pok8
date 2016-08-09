@@ -1,3 +1,49 @@
+@import 'https://fonts.googleapis.com/css?family=Quicksand:400,700';
+
 body{
     background:$background;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+h1, h2{
+    font-size: 18px;
+    line-height: 1.6;
+    width: 100%;
+    text-align: center;
+    @extend %explode;
+    &.hide{
+        transform: translateY(-200px);
+    }
+}
+h1{
+    font-size: 22px;
+    padding-top: 20px;
+}
+
+a{
+    display: inline-block;
+    padding: 10px;
+    text-decoration:none;
+    text-transform: uppercase;
+    color: $pokeball--black;
+    font-size:14px;
+    border-radius: 3px;
+    &.retry{
+        z-index: 20;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%) translateY(100px);
+        opacity: 0;
+        width: 150px;
+        text-align: center;
+        background-color: #76E8A1;
+        color: white;
+        @extend %explode;
+        &--visible{
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+    }
 }

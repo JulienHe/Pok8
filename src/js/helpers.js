@@ -18,4 +18,9 @@ export class Helpers{
         var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
         return { width: srcWidth*ratio, height: srcHeight*ratio };
     }
+    checkVariable(variableLoaded) {
+        if(variableLoaded==true){
+            return variableLoaded;
+        }
+    }
 }
