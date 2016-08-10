@@ -9,11 +9,16 @@ const shaker = new Shaker();
 const giphy = new Giphy();
 const pokeball = new Pokeball();
 
-var goShake = shaker.listen();
+
+$('body').on('click', '.start' , (event) => {
+    event.preventDefault();
+    $('.modal').addClass('invisible');
+    var goShake = shaker.listen();
+})
 
 // shaker.shakeIt();
-$('body').on('click', '.retry' ,(e) => {
-    e.preventDefault();
+$('body').on('click', '.retry' ,(event) => {
+    event.preventDefault();
     pokeball.togglePokeball();
     pokeball.openClosePokeball(0,0);
     $('.retry').toggleClass('retry--visible');

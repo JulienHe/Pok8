@@ -44,7 +44,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/Icon-App-60x60@3x.png">
 
     <!-- Allow web app to be run in full-screen mode. -->
-    <meta name="apple-mobile-web-app-capable" content="yes">  
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Make the app title different than the page title. -->
     <meta name="apple-mobile-web-app-title" content="Pok8">
     <meta name="mobile-web-app-capable" content="yes">
@@ -54,8 +54,18 @@
 
 </head>
 <body>
-    <h1>Welcome to Pok8</h1>
-    <h2>Ask yourself a question, and shake!</h2>
+    <section class="modal">
+        <div class="modal__content">
+            <h1>Pok8</h1>
+            <h2>Make a wish and shake!</h2>
+            <p>Shake your phone and have fun answer with random gif. Based on the model of the magic 8 ball, gifs are powered by Giphy. <br>If you have any cool idea, <a href="mailto:hoshi.graphi@gmail.com">be my guest</a>.</p>
+            <button type="button" name="button" class="start">I want to shake!</button>
+        </div>
+        <footer class="modal__footer">
+            <p>© Henrotte Julien</p>
+            <img src="img/giphy.png" alt="Powered by Giphy">
+        </footer>
+    </section>
     <section class="main" role="main">
         <div class="pokeball">
             <div class="pokeball__up">
