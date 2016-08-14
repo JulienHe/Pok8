@@ -1,12 +1,16 @@
-.cross{
+.shape{
     width: 20px;
     height: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
+    @extend %explode;
+}
+
+
+.cross{
     transform: rotateZ(0);
     z-index: -2;
-    @extend %explode;
     margin-left:-10px;
     margin-top:-10px;
     transform-origin : 50% 50%;

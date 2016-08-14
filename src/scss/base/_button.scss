@@ -1,0 +1,28 @@
+button{
+    @extend %blueGradient;
+    @extend %explode;
+    display: inline-block;
+    border: 0;
+    font-size: 14px;
+    padding: 10px 20px;
+    line-height: 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    outline : 0;
+    &.green{
+        @extend %greenGradient;
+    }
+}
+
+.retry{
+    z-index: 20;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    opacity: 0;
+    &--visible{
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}

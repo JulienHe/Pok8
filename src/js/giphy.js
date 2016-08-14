@@ -24,13 +24,12 @@ export class Giphy{
             }
         })
         .done(function(data, textStatus, jqXHR) {
-            console.log("HTTP Request Succeeded: " + jqXHR.status);
-            console.log(data);
+            // console.log("HTTP Request Succeeded: " + jqXHR.status);
+            // console.log(data);
             var ratioElement = helpers.calculateAspectRatioFit(data.data.image_width, data.data.image_height, windowWidthMeasure, windowWidthMeasure);
             var image = "<img class='answer' src='"+ data.data.image_original_url +"'>";
             var heighti = ratioElement.height / 2;
             $('body').append(image);
-
             $(".answer").one("load", function() {
               // do stuff
                 pokeball.togglePokeball();

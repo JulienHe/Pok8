@@ -5,30 +5,3 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
     overflow:hidden;
 }
-
-.retry{
-    display: inline-block;
-    padding: 10px;
-    text-decoration:none;
-    text-transform: uppercase;
-    color: $pokeball--black;
-    font-size:14px;
-    border-radius: 3px;
-    &.retry{
-        z-index: 20;
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%) translateY(100px);
-        opacity: 0;
-        width: 150px;
-        text-align: center;
-        background-color: #76E8A1;
-        color: white;
-        @extend %explode;
-        &--visible{
-            transform: translateX(-50%) translateY(0);
-            opacity: 1;
-        }
-    }
-}
